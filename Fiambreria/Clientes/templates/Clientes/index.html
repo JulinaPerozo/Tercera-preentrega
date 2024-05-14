@@ -1,0 +1,13 @@
+{% extends 'core/base.html' %}
+
+{% block titulo %}
+    Clientes Registrados en nuestra app
+{% endblock titulo %}
+
+{% block contenido %}
+    {% for cliente in clientes %}
+        <h1>{{ cliente.nombre }}</h1> <h1>{{ cliente.apellido }}</h1>
+        <h2>{{ cliente.email }}</h2>
+        <p>{{cliente.sucursal }}</p>
+    {% endfor %}
+{% endblock contenido %}
