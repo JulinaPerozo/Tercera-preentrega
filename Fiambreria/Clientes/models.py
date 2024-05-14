@@ -1,7 +1,7 @@
 from django.db import models
 
 class Sucursal(models.Model):
-    nombre = models.CharField(max_length=255)
+    nombre = models.CharField(max_length=255, unique=True)
     direccion = models.CharField(max_length=255)
     
     def __str__(self) -> str:
