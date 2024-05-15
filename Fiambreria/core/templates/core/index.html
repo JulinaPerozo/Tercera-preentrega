@@ -1,13 +1,38 @@
 {% extends 'core/base.html' %}
+{% load static %}
 
-{% block titulo %}
-    <h1>
-        Fiambrería & Almacén PEROZZI | Página Inicio
-    </h1>
-{% endblock titulo %}
+{% block title %}
+Fiambrería & Almacén PEROZZI  
+{% endblock title %}
 
-{% block contenido %}
-    <div>
-        <a href="{% url 'Clientes:index' %}">Ir a Clientes</a>
+{% block body_title %}
+    Página Inicio
+{% endblock body_title %}
+
+{% block content %}
+
+    <!-- Page Content-->
+    <div class="container px-4 px-lg-5">
+        <!-- Heading Row-->
+        <div class="row gx-4 gx-lg-5 align-items-center my-5">
+            <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0"
+                    src="{% static 'core/img/img.webp' %}" alt="..." /></div>
+            <div class="col-lg-5">
+                <h1 class="font-weight-light">Fiambrería & Almacén PEROZZI </h1>
+                <p>¡Bienvenido a la página web de nuestra fiambrería y almacén familiar! 
+                    Somos el lugar ideal para encontrar los productos más frescos y deliciosos para satisfacer tus necesidades culinarias diarias.</p>
+                <a class="btn btn-primary" href="https://wa.me/5494736282" target="_blank">Hacer pedido por Whatsapp</a>
+            </div>
+        </div>
+        <!-- Call to Action-->
+        <div class="card text-white bg-secondary my-2 py-1 text-center">
+            <div class="card-body">
+                <p class="text-white m-0">Tenemos promociones en muchos productos para vos.</p>
+            </div>
+        </div>
+        <!-- Content Row-->
+        <div class="row gx-4 gx-lg-5">
+        </div>
     </div>
-{% endblock contenido %}
+    
+{% endblock content %}

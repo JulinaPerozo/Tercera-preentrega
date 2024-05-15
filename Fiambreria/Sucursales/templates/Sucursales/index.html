@@ -1,0 +1,11 @@
+{% extends 'core/base.html' %}
+
+{% block titulo %}
+    Sucursales
+{% endblock titulo %}
+
+{% block contenido %}
+    {% for suc in sucursal %}
+        <h1>{{ suc.nombre }}</h1> <h1>{{ suc.direccion }}</h1>
+    {% endfor %}
+{% endblock contenido %}

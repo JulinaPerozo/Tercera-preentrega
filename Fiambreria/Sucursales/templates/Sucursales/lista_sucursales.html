@@ -1,0 +1,14 @@
+{% extends 'core/base.html' %}
+
+{% block body_title %}
+    Cliente: Listado de clientes
+{% endblock body_title %}
+
+{% block content %}
+    {% for suc in sucursal %}
+        <ul>
+            <li><h3>{{ sucursal }}</h3></li>
+            <p>Direccion: {{ suc.direccion }}</p>
+        </ul>
+    {% endfor %}    
+{% endblock content %}

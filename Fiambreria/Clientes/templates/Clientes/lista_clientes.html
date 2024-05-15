@@ -1,0 +1,20 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+    Cliente | Cliente: Listado
+{% endblock title %}
+
+{% block body_title %}
+    Cliente: Listado de clientes
+{% endblock body_title %}
+
+{% block content %}
+    {% for cliente in Clientes %}
+        <ul>
+            <li><h3>{{ cliente }}</h3></li>
+            <p>Nombre: {{ cliente.nombre }}</p>
+            <p>Apellido: {{ cliente.apellido }}</p>
+            <p>Email: {{ cliente.email }}</p>
+        </ul>
+    {% endfor %}    
+{% endblock content %}

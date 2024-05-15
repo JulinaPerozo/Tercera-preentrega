@@ -1,13 +1,17 @@
 {% extends 'core/base.html' %}
 
-{% block titulo %}
-    Clientes Registrados en nuestra app
-{% endblock titulo %}
+{% block title %}
+    Cliente
+{% endblock title %}
 
-{% block contenido %}
-    {% for cliente in clientes %}
-        <h1>{{ cliente.nombre }}</h1> <h1>{{ cliente.apellido }}</h1>
-        <h2>{{ cliente.email }}</h2>
-        <p>{{cliente.sucursal }}</p>
-    {% endfor %}
-{% endblock contenido %}
+{% block body_title %}
+    App Cliente
+{% endblock body_title %}
+
+{% block content %}
+    
+    <div>
+        <a href="{% url 'Clientes:lista_clientes' %}">Lista de clientes</a>
+    </div>
+    <button><a href="{% url 'core:index' %}">Ir a página de inicio</a></button>
+{% endblock content %}

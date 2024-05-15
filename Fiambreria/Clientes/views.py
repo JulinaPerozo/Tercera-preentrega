@@ -1,7 +1,10 @@
 from django.shortcuts import render
-from . import models
+from .models import Clientes
 
 def index(request):
-    consulta = models.Clientes.objects.all()
-    contexto = {"clientes": consulta}
-    return render(request, "Clientes/index.html", contexto)
+    return render(request, "Clientes/index.html")
+
+def lista_clientes(request):
+    consulta = Clientes.objects.all()
+    contexto = {"Clientes": consulta}
+    return render(request, "Clientes/lista_clientes.html", contexto)
