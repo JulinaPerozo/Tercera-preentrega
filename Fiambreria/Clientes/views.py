@@ -15,7 +15,7 @@ def cliente_create(request):
         form = ClientesForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect("Clientes:lista_clientes.html")
+            return redirect("Clientes:lista_clientes")
     else: #GET
         form = ClientesForm()
     return render(request, "Clientes/cliente_form.html", {"form": form})

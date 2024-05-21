@@ -1,20 +1,20 @@
 {% extends 'core/base.html' %}
-
 {% block title %}
-    Cliente | Cliente: Listado
+    Clientes
 {% endblock title %}
-
+    {% if form.instance.pk %}
+        Clientes: Listado de clientes > Edición
+    {% else %}
+        Clientes: Listado de clientes > Creación
+    {% endif %}
 {% block body_title %}
-    Clientes: Listado de clientes > Creación
 {% endblock body_title %}
-
 {% block content %}
-    {% for cliente in Clientes %}
-        <ul>
-            <li><h3>{{ cliente }}</h3></li>
-            <p>Nombre: {{ cliente.nombre }}</p>
-            <p>Apellido: {{ cliente.apellido }}</p>
-            <p>Email: {{ cliente.email }}</p>
-        </ul>
-    {% endfor %}    
+    <form method="post">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <button type="submit">Guardar</button>
+    </form>
 {% endblock content %}
