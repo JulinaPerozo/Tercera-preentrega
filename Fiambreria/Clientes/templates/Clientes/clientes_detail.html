@@ -1,0 +1,21 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+    Clientes | Listado Clientes
+{% endblock title %}
+
+{% block body_title %}
+Clientes | Listado Clientes Vista en Detalle
+{% endblock body_title %}
+
+{% block content %}
+    <ul>
+        <li>Nombre: {{ Clientes.nombre }}</li>
+        <li>Apellido: {{ Clientes.apellido }}</li>
+        <li>Descripción: {{ Clientes.descripcion }}</li>
+        <li>Sucursal: {{ Clientes.sucursal }}</li>
+    </ul>
+    <div>
+        <a href="{% url 'Clientes:lista_clientes' %}">Volver atrás</a>
+    </div>
+{% endblock content %}

@@ -1,0 +1,20 @@
+{% extends 'core/base.html' %}
+{% block title %}
+    Clientes
+{% endblock title %}
+    {% if form.instance.pk %}
+        Clientes: Listado de clientes > Edición
+    {% else %}
+        Clientes: Listado de clientes > Creación
+    {% endif %}
+{% block body_title %}
+{% endblock body_title %}
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <button type="submit">Guardar</button>
+    </form>
+{% endblock content %}

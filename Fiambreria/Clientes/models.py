@@ -14,7 +14,7 @@ class Clientes(models.Model):
     sucursal = models.ForeignKey(Sucursal, on_delete=models.SET_NULL, null=True, blank=True)
 
     def __str__(self) -> str:
-        return f"{self.nombre}, {self.apellido}, {self.email}"
+        return f"{self.nombre}, {self.apellido}, {self.email}, {self.sucursal}"
 
 class Empleados(models.Model):
     nombre = models.CharField(max_length=255)
@@ -22,4 +22,4 @@ class Empleados(models.Model):
     sucursal = models.ForeignKey(Sucursal, on_delete=models.SET_NULL, null=True, blank=True)
 
     def __str__(self) -> str:
-        return f"{self.nombre}, {self.apellido}"
+        return f"{self.nombre}, {self.apellido}, {self.sucursal}"
