@@ -1,11 +1,21 @@
 {% extends 'core/base.html' %}
 
-{% block titulo %}
+{% block title %}
     Sucursales
-{% endblock titulo %}
+{% endblock title %}
 
-{% block contenido %}
-    {% for suc in sucursal %}
-        <h1>{{ suc.nombre }}</h1> <h1>{{ suc.direccion }}</h1>
-    {% endfor %}
-{% endblock contenido %}
+{% block body_title %}
+    Sucursales
+{% endblock body_title %}
+
+{% block content %}
+    
+    <div>
+        <a href="{% url 'Sucursales:lista_sucursales' %}">Lista de Sucursales</a>
+        <p></p>
+        <a href="{% url 'Sucursales:create' %}">Registrar nueva Sucursal</a>
+        <p></p>
+    </div>
+    <p></p>
+    <button><a href="{% url 'core:index' %}">Ir a página de inicio</a></button>
+{% endblock content %}

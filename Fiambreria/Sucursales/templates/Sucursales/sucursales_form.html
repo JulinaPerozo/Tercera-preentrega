@@ -1,0 +1,20 @@
+{% extends 'core/base.html' %}
+{% block title %}
+    Sucursales
+{% endblock title %}
+    {% if form.instance.pk %}
+    Sucursales: Listado de Sucursales > Edición
+    {% else %}
+    Sucursales: Listado de Sucursales > Creación
+    {% endif %}
+{% block body_title %}
+{% endblock body_title %}
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <button type="submit">Guardar</button>
+    </form>
+{% endblock content %}

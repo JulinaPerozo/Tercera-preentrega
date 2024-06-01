@@ -1,14 +1,19 @@
 {% extends 'core/base.html' %}
 
+{% block title %}
+    Sucursales | Sucursales: Listado
+{% endblock title %}
+
 {% block body_title %}
-    Cliente: Listado de clientes
+    Sucursales: Listado de Sucursales
 {% endblock body_title %}
 
 {% block content %}
-    {% for suc in sucursal %}
+    {% for sucursal in Sucursales %}
         <ul>
-            <li><h3>{{ sucursal }}</h3></li>
-            <p>Direccion: {{ suc.direccion }}</p>
+            <li><h3>{{ Sucursales }}</h3></li>
+            <p>Nombre: {{ sucursal.nombre }}</p>
+            <p>Apellido: {{ sucursal.direccion }}</p>
         </ul>
     {% endfor %}    
 {% endblock content %}
