@@ -9,11 +9,16 @@
 {% endblock body_title %}
 
 {% block content %}
-    {% for sucursal in Sucursales %}
-        <ul>
-            <li><h3>{{ Sucursales }}</h3></li>
-            <p>Nombre: {{ sucursal.nombre }}</p>
-            <p>Apellido: {{ sucursal.direccion }}</p>
-        </ul>
-    {% endfor %}    
+    <div class="row">
+        {% for sucursal in Sucursales %}
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Sucursal: {{ sucursal.nombre }}</h5>
+                        <p class="card-text"><strong>Dirección:</strong> {{ sucursal.direccion }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock content %}

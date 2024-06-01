@@ -1,13 +1,13 @@
 {% extends 'core/base.html' %}
 {% block title %}
-    Clientes
+    Clientes | Clientes
 {% endblock title %}
-    {% if form.instance.pk %}
-        Clientes: Listado de clientes > Edición
-    {% else %}
-        Clientes: Listado de clientes > Creación
-    {% endif %}
 {% block body_title %}
+    {% if form.instance.pk %}
+    Clientes:  Edición clientes
+    {% else %}
+    Clientes: Registro nuevos clientes
+    {% endif %}
 {% endblock body_title %}
 {% block content %}
     <form method="post">

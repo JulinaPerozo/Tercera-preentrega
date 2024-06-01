@@ -1,13 +1,13 @@
 {% extends 'core/base.html' %}
 {% block title %}
-    Sucursales
+    Sucursales | Sucursales
 {% endblock title %}
-    {% if form.instance.pk %}
-    Sucursales: Listado de Sucursales > Edición
-    {% else %}
-    Sucursales: Listado de Sucursales > Creación
-    {% endif %}
 {% block body_title %}
+    {% if form.instance.pk %}
+    Sucursales:  Edición sucursales
+    {% else %}
+    Sucursales: Registro nuevas sucursales
+    {% endif %}
 {% endblock body_title %}
 {% block content %}
     <form method="post">
