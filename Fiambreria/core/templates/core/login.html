@@ -1,0 +1,22 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+    Fiambrería & Almacén PEROZZI 
+{% endblock title %}
+
+{% block body_title %}
+    Login
+{% endblock body_title %}
+
+{% block content %}
+
+    <form method="post">
+        {% csrf_token %}
+        <table>
+            {{ form.as_p }}
+            <input type="hidden" name="next" value="{% url 'core:index' %}">
+            <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+            <a href="{% url 'core:index' %}" class="btn btn-secondary">Cancelar</a>
+        </table>
+    </form>
+{% endblock content %}
